@@ -23,13 +23,14 @@ function Login() {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.wrapper}>
       <form onSubmit={handleLogin} style={styles.form}>
-        <h2 style={styles.title}>Connexion</h2>
+        <h2 style={styles.title}>Bienvenue 👋</h2>
+        <p style={styles.subtitle}>Connecte-toi à ton espace</p>
 
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Adresse e-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -54,50 +55,62 @@ function Login() {
 }
 
 const styles = {
-  container: {
+  wrapper: {
     backgroundColor: '#bde0fe',
     height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    fontFamily: "'Segoe UI', sans-serif",
   },
   form: {
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     padding: '40px',
-    borderRadius: '10px',
-    boxShadow: '0px 0px 15px rgba(0,0,0,0.1)',
+    borderRadius: '16px',
+    boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)',
     width: '100%',
     maxWidth: '400px',
     display: 'flex',
     flexDirection: 'column',
+    transition: '0.3s ease-in-out',
   },
   title: {
-    marginBottom: '20px',
+    fontSize: '28px',
+    fontWeight: '600',
+    color: '#023e8a',
+    marginBottom: '10px',
     textAlign: 'center',
-    color: '#0077b6',
+  },
+  subtitle: {
+    fontSize: '14px',
+    color: '#555',
+    marginBottom: '25px',
+    textAlign: 'center',
   },
   input: {
-    padding: '10px',
-    marginBottom: '15px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
+    padding: '12px 15px',
+    marginBottom: '20px',
+    borderRadius: '8px',
+    border: '1px solid #ddd',
     fontSize: '16px',
+    outline: 'none',
+    transition: '0.2s',
   },
   button: {
     backgroundColor: '#bde0fe',
-    color: 'black',
-    padding: '10px',
     border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
+    padding: '12px',
+    borderRadius: '8px',
     fontWeight: 'bold',
-    transition: 'background-color 0.3s',
+    fontSize: '16px',
+    cursor: 'pointer',
+    transition: '0.3s ease',
   },
   message: {
-    marginTop: '10px',
+    marginTop: '15px',
     textAlign: 'center',
+    color: '#555',
     fontWeight: 'bold',
-    color: '#333',
   },
 };
 
